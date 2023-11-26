@@ -17,4 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/user', 'admin.user.index');
+Route::prefix('/admin')->group(function () {
+    // ユーザー管理
+    Route::view('/user', 'admin.user.index');
+    // Route::
+
+    // 会社管理
+    Route::view('/company', 'admin.user.index');
+
+    // 商品管理
+    Route::view('/production', 'admin.user.index');
+
+});

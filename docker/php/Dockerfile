@@ -6,6 +6,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1 \
   COMPOSER_PROCESS_TIMEOUT=1200
 
 COPY --from=composer:2.2 /usr/bin/composer /usr/bin/composer
+COPY ./php.ini /usr/local/etc/php/php.ini
 
 RUN \
   apt-get update && \
@@ -18,7 +19,5 @@ RUN \
   docker-php-ext-enable xdebug && \
   docker-php-ext-configure gd --with-freetype --with-jpeg && \
   docker-php-ext-install -j$(nproc) gd exif
-
-COPY ./php.ini /usr/local/etc/php/php.ini
 
 WORKDIR /work/src
