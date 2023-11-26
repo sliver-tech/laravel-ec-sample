@@ -3,11 +3,7 @@
 @section('title', 'ユーザ管理')
 
 @section('body')
-<h1 class="mt-4">Tables</h1>
-<ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-    <li class="breadcrumb-item active">Tables</li>
-</ol>
+<h1 class="mt-4">ユーザー管理</h1>
 <div class="card mb-4">
     <div class="card-body">
         DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
