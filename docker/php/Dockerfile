@@ -19,11 +19,6 @@ RUN \
   docker-php-ext-configure gd --with-freetype --with-jpeg && \
   docker-php-ext-install -j$(nproc) gd exif
 
-# install Node.js
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
-  apt-get install -y nodejs && \
-  npm install npm@latest -g
-
 COPY ./php.ini /usr/local/etc/php/php.ini
 
 WORKDIR /work/src
