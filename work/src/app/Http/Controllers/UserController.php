@@ -16,23 +16,10 @@ class UserController extends Controller
         return view('admin.user.index')->with(['users' => $users]);
     }
 
-    public function edit()
+    public function delete($user_id = null)
     {
-        return view('admin.user.edit');
-    }
+        User::destroy($user_id);
 
-    public function create()
-    {
-        return view('admin.user.create');
-    }
-
-    public function update()
-    {
-        return view('admin.user.update');
-    }
-
-    public function delete()
-    {
-        return view('admin.user.delete');
+        return view('admin.user.complete');
     }
 }

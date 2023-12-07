@@ -1,4 +1,6 @@
 {
   "Email": "メールアドレス",
-  "Password": "パスワード"
+  "Password": "パスワード",
+  "Remember me": "ログイン状態を維持",
+  "Log in": "ログインする"
 }
