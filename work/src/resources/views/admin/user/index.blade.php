@@ -22,12 +22,7 @@
                     <th>メールアドレス</th>
                 </tr>
             </thead>
-            <tfoot class="table-group-divider">
-                <tr>
-                    <th>ユーザー名</th>
-                    <th>メールアドレス</th>
-                </tr>
-            </tfoot>
+
             <tbody class="table-group-divider">
                 @foreach ($users as $user)
                 <tr>

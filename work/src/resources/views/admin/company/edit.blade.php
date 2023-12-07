@@ -26,14 +26,37 @@
         @csrf
 
         <div class="mb-3">
-            <label for="name" class="form-label">企業名</label>
-            <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $company->name ?? null) }}">
+            <label for="company-name" class="form-label">企業名</label>
+            <input
+                type="text"
+                id="company-name"
+                name="company-name"
+                class="form-control @error('company-name') is-invalid @enderror"
+                value="{{ old('company-name', $company->name ?? null) }}"
+            >
+
+            @error('company-name')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
         </div>
 
         <div class="mb-3">
-            <label for="description" class="form-label">企業概要</label>
-            <textarea class="form-control" id="description" name="description" rows="3"
-                >{{ old('description', $company->description ?? null) }}</textarea>
+            <label for="company-description" class="form-label">企業概要</label>
+            <textarea
+                rows="3"
+                id="company-description"
+                name="company-description"
+                class="form-control @error('company-description') is-invalid @enderror"
+            >{{ old('company-description', $company->description ?? null) }}</textarea>
+
+            @error('company-description')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+
         </div>
 
 

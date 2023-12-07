@@ -27,12 +27,17 @@ class CompanyController extends Controller
 
     public function store(Request $request, $company_id = null)
     {
+        $request->validate([
+            'company-name' => 'required|max:255',
+            'company-description' => 'required|max:255',
+        ]);
+
         if ($company_id == null) {
             $action = '新規登録';
 
             Company::create([
-                'name' => $request->name,
-                'description' => $request->description,
+                'name' => $request->input('company-name'),
+                'description' => $request->input('company-description'),
             ]);
 
         } else {
@@ -40,8 +45,8 @@ class CompanyController extends Controller
 
             Company::find($company_id)->update(
                 [
-                    'name' => $request->name,
-                    'description' => $request->description,
+                    'name' => $request->input('company-name'),
+                    'description' => $request->input('company-description'),
                 ]
             );
         }

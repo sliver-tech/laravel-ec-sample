@@ -69,7 +69,7 @@ docker compose start
 docker compose exec php bash
 ```
 
-### phpから始まるコマンドは、入力カーソルの左側が「root@xxxxxxxxxx:/work/src#」となっていることを確認して実行しよう！
+### phpから始まるコマンドを実行するときは、入力カーソルの左側が「root@xxxxxxxxxx:/work/src#」となっていることを確認しよう！
 
 ## ファイルを編集しても変更が反映されないときは
 以下のコマンドを実行しましょう。
