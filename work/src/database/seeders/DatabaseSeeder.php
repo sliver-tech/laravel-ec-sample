@@ -15,20 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory()->create([
-            'name' => 'テストユーザー1',
-            'email' => 'test1@example.com',
-            'password' => Hash::make('password'),
-        ]);
-
-        \App\Models\User::factory(10)->create();
-
-        \App\Models\Company::factory(10)->create();
-
-        \App\Models\Company::all()->each(function ($company) {
-            \App\Models\Product::factory(10)->create([
-                'company_id' => $company->id,
-            ]);
-        });
+        $this->call(UserSeeder::class);
+        $this->call(CompanySeeder::class);
+        $this->call(ProductSeeder::class);
+        $this->call(EventSeeder::class);
     }
 }
