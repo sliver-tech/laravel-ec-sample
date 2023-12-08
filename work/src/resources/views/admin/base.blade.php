@@ -40,7 +40,7 @@
                         <a class="nav-link" href="{{ route('admin.company.index') }}">
                             企業管理
                         </a>
-                        <a class="nav-link" href="{{ route('admin.production.index') }}">
+                        <a class="nav-link" href="{{ route('admin.product.index') }}">
                             商品管理
                         </a>
                         <a class="nav-link" href="{{ route('admin.event.index') }}">

@@ -48,21 +48,26 @@ Route::prefix('/admin/company')->name('admin.company.')->group(function () {
 });
 
 // 商品管理のルーティング
-Route::prefix('/admin/production')->name('admin.production.')->group(function () {
+Route::prefix('/admin/production')->name('admin.product.')->group(function () {
 
-    // 商品一覧を表示するURL ( http://localhost/admin/production )
+    // 商品一覧を表示するURL ( http://localhost/admin/product )
     Route::get('/', [ProductController::class, 'index'])->name('index');
 
     // ここから下に、商品の新規登録・更新・削除のルーティングを追加しましょう！
+
+
+
 });
 
-// イベント管理のルーティング
+
+
+// 【チャレンジ】イベント管理のルーティング
 Route::prefix('/admin/event')->name('admin.event.')->group(function () {
 
-    // イベント一覧を表示するURL ( http://localhost/admin/event )
     Route::get('/', [EventController::class, 'index'])->name('index');
 
-    // ここから下に、イベントの新規登録・更新・削除のルーティングを追加しましょう！
+
+
 });
 
 require __DIR__.'/auth.php';

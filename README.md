@@ -7,8 +7,8 @@ ECサイトと、その管理画面のサンプルです。
 ## ローカル環境構築
 
 1. 以下のアプリをPCにインストールすること。
-  - VSCode
-  - Docker
+  - [VSCode](https://code.visualstudio.com/download)
+  - [Docker](https://docs.docker.com/engine/install/)
 2. 次に、VSCodeを開き、左上部の[ファイル > フォルダーを開く]から、このフォルダ(laravel-ec-sampleフォルダ)を選択する。
 3. VSCodeの拡張機能をインストールする
   - コマンドでインストールする場合は、以下のコマンドを順に実行すること。
@@ -52,7 +52,7 @@ ECサイトと、その管理画面のサンプルです。
 - [http://localhost:3001/index.php?route=/database/structure&db=laravel](http://localhost:3001/index.php?route=/database/structure&db=laravel)
 
 ## タスク一覧
-- 
+- [miroのリンク](https://miro.com/welcomeonboard/Sk93UnRjbU45U2FJZG9jeDRCZmlrbmJpcjlRT2xuaFpBZFJVdk45QXZUd3ZPeGlJREZWTTBUVm5hT2RyMDFPUnwzNDU4NzY0NTcyNTUwMDIxNjEyfDI=?share_link_id=572017777330)
 
 ## 作業で使うコマンド
 

@@ -13,6 +13,8 @@ class CompanyController extends Controller
     {
         $companies = Company::all();
 
+        // dd($companies);
+
         return view('admin.company.index')->with(['companies' => $companies]);
     }
 
