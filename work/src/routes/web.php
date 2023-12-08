@@ -3,20 +3,22 @@
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 // 一般画面のルーティング
+Route::get('/', [ShopController::class, 'top'])->name('shop.top');
+Route::get('/products', [ShopController::class, 'products'])->name('shop.products');
+Route::get('/companies', [ShopController::class, 'companies'])->name('shop.companies');
+Route::get('/events', [ShopController::class, 'events'])->name('shop.events');
+Route::get('/purchase/{product_id}', [ShopController::class, 'purchase'])->name('shop.purchase');
+Route::view('/purchase-complete', 'shop.purchase-complete')->name('shop.purchase.complete');
+Route::view('/service', 'shop.service')->name('shop.service');
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 // ここから管理画面のルーティング
+
 
 // ユーザー管理のルーティング
 Route::prefix('/admin/user')->name('admin.user.')->middleware(['auth', 'verified'])->group(function () {
@@ -50,6 +52,8 @@ Route::prefix('/admin/production')->name('admin.production.')->group(function ()
 
     // 商品一覧を表示するURL ( http://localhost/admin/production )
     Route::get('/', [ProductController::class, 'index'])->name('index');
+
+    // ここから下に、商品の新規登録・更新・削除のルーティングを追加しましょう！
 });
 
 // イベント管理のルーティング
@@ -57,6 +61,8 @@ Route::prefix('/admin/event')->name('admin.event.')->group(function () {
 
     // イベント一覧を表示するURL ( http://localhost/admin/event )
     Route::get('/', [EventController::class, 'index'])->name('index');
+
+    // ここから下に、イベントの新規登録・更新・削除のルーティングを追加しましょう！
 });
 
 require __DIR__.'/auth.php';

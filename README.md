@@ -2,6 +2,8 @@
 
 ECサイトと、その管理画面のサンプルです。
 
+[スライドショーURL](https://docs.google.com/presentation/d/1t1dKsvvS2dTdkWB05BN9_XA361uXgfmXdrHk6meihHs)
+
 ## ローカル環境構築
 
 1. 以下のアプリをPCにインストールすること。

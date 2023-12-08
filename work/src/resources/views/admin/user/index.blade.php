@@ -28,7 +28,9 @@
                 <tr>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
+                    @if ($user->id != Auth::user()->id)
                     <td><a href="{{ route('admin.user.delete', ['user_id' => $user->id]) }}"><button type="button" class="btn btn-danger">削除</button></a></td>
+                    @endif
                 </tr>
                 @endforeach
             </tbody>
