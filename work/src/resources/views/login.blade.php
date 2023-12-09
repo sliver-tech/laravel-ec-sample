@@ -11,10 +11,10 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&amp;display=swap" rel="stylesheet">
 
     <!-- Scripts -->
-    <link rel="preload" as="style" href="http://localhost/build/assets/app-932214ad.css">
-    <link rel="modulepreload" href="http://localhost/build/assets/app-23e3ce8a.js">
-    <link rel="stylesheet" href="http://localhost/build/assets/app-932214ad.css">
-    <script type="module" src="http://localhost/build/assets/app-23e3ce8a.js"></script>
+    <link rel="preload" as="style" href="http://localhost/builded/assets/app-932214ad.css">
+    <link rel="modulepreload" href="http://localhost/builded/assets/app-23e3ce8a.js">
+    <link rel="stylesheet" href="http://localhost/builded/assets/app-932214ad.css">
+    <script type="module" src="http://localhost/builded/assets/app-23e3ce8a.js"></script>
 </head>
 <body class="font-sans text-gray-900 antialiased">
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
