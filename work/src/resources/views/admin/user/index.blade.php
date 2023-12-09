@@ -1,9 +1,9 @@
 @extends('admin.base')
 
-@section('title', 'ユーザ管理')
+@section('title', 'ユーザ一覧')
 
 @section('body')
-<h1 class="mt-4">ユーザー管理</h1>
+<h1 class="mt-4">ユーザー一覧</h1>
 <div class="card mb-4">
     <div class="card-body">
         このページは、ユーザーを確認したり、削除することができるページです。

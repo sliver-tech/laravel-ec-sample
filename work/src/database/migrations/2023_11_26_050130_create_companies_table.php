@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
+            $table->string('status'); // 「上場」or「非上場」
             $table->timestamps();
         });
     }

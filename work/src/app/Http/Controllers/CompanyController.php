@@ -32,6 +32,7 @@ class CompanyController extends Controller
         $request->validate([
             'company-name' => 'required|max:255',
             'company-description' => 'required|max:255',
+            'company-status' => 'required|in:上場,非上場',
         ]);
 
         if ($company_id == null) {
@@ -40,6 +41,7 @@ class CompanyController extends Controller
             Company::create([
                 'name' => $request->input('company-name'),
                 'description' => $request->input('company-description'),
+                'status' => $request->input('company-status'),
             ]);
 
         } else {
@@ -49,6 +51,7 @@ class CompanyController extends Controller
                 [
                     'name' => $request->input('company-name'),
                     'description' => $request->input('company-description'),
+                    'status' => $request->input('company-status'),
                 ]
             );
         }

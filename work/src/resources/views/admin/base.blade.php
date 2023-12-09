@@ -35,16 +35,16 @@
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">画面一覧</div>
                         <a class="nav-link" href="{{ route('admin.user.index') }}">
-                            ユーザー管理
+                            ユーザー一覧
                         </a>
                         <a class="nav-link" href="{{ route('admin.company.index') }}">
-                            企業管理
+                            企業一覧
                         </a>
                         <a class="nav-link" href="{{ route('admin.product.index') }}">
-                            商品管理
+                            商品一覧
                         </a>
                         <a class="nav-link" href="{{ route('admin.event.index') }}">
-                            イベント管理
+                            イベント一覧
                         </a>
                     </div>
                 </div>

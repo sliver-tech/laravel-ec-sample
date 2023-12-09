@@ -48,7 +48,7 @@ Route::prefix('/admin/company')->name('admin.company.')->group(function () {
 });
 
 // 商品管理のルーティング
-Route::prefix('/admin/production')->name('admin.product.')->group(function () {
+Route::prefix('/admin/product')->name('admin.product.')->group(function () {
 
     // 商品一覧を表示するURL ( http://localhost/admin/product )
     Route::get('/', [ProductController::class, 'index'])->name('index');

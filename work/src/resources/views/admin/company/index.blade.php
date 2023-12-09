@@ -1,9 +1,9 @@
 @extends('admin.base')
 
-@section('title', '企業管理')
+@section('title', '企業一覧')
 
 @section('body')
-<h1 class="mt-4">企業管理</h1>
+<h1 class="mt-4">企業一覧</h1>
 <div class="card mb-4">
     <div class="card-body">
         このページは、企業の情報を確認したり、新規登録・編集・削除することができるページです。

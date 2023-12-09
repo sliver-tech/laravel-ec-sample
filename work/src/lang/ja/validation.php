@@ -66,7 +66,7 @@ return [
         'string' => 'The :attribute must be greater than or equal to :value characters.',
     ],
     'image' => 'The :attribute must be an image.',
-    'in' => 'The selected :attribute is invalid.',
+    'in' => ':attributeの値が不正です。',
     'in_array' => 'The :attribute field does not exist in :other.',
     'integer' => 'The :attribute must be an integer.',
     'ip' => 'The :attribute must be a valid IP address.',
@@ -182,6 +182,6 @@ return [
     'attributes' => [
         'company-name' => '企業名',
         'company-description' => '企業概要',
+        'company-status' => '企業ステータス',
     ],
-
 ];

@@ -20,12 +20,17 @@
     </div>
 @endif
 
+{{-- デバッグ用のバリデーションメッセージ表示 --}}
+
+{{-- @foreach ($errors->all() as $error)
+    <li>{{$error}}</li>
+@endforeach --}}
 
 <div class="card">
     <form class="card-body" method="POST" action="{{ route('admin.company.store', ['company_id' => $company->id ?? null]) }}">
         @csrf
 
-        <div class="mb-3">
+        <div class="mb-3 col-md-3">
             <label for="company-name" class="form-label">企業名</label>
             <input
                 type="text"
@@ -56,9 +61,21 @@
                     {{ $message }}
                 </div>
             @enderror
-
         </div>
 
+        <div class="mb-3 col-md-3">
+            <label for="company-status" class="form-label">企業ステータス(上場・非上場)</label>
+            <select id="company-status" name="company-status" class="form-select @error('company-status') is-invalid @enderror" required="">
+                <option value="上場" @if($company->status === '上場') selected @endif>上場</option>
+                <option value="非上場" @if($company->status === '非上場') selected @endif>非上場</option>
+            </select>
+
+            @error('company-status')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
 
         <button type="submit" class="btn btn-inherit mr-5">
             <a href="{{ route('admin.company.index') }}">
