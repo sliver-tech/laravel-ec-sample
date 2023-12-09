@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="MpX8BeE5DSlBaaalcAVZ6DUbVcfIVcQ0NXQufY7s">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ env('APP_NAME') }}</title>
 
@@ -26,7 +26,8 @@
 
         <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
             <form method="POST" action="{{ route('login') }}">
-                <input type="hidden" name="_token" value="MpX8BeE5DSlBaaalcAVZ6DUbVcfIVcQ0NXQufY7s">
+                @csrf
+
                 <!-- Email Address -->
                 <div>
                     <label class="block font-medium text-sm text-gray-700" for="email">
